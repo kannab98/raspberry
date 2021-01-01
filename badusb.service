@@ -1,0 +1,17 @@
+[Unit]
+Description=Pi Zero USB Gadget
+ConditionFileIsExecutable=/etc/rc
+After=network-online.target
+
+
+
+
+[Service]
+Type=forking
+ExecStart=/etc/rc start
+RemainAfterExit=yes
+GuessMainPID=no
+
+
+[Install]
+WantedBy=multi-user.target

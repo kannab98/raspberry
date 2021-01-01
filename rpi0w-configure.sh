@@ -47,7 +47,7 @@ ln -sf \
 
 cp ./otg-mode.sh /mnt/root/otg-mode.sh
 chmod +x /mnt/root/otg-mode.sh
-##
+#
 #curl https://gist.githubusercontent.com/kannab98/1b0b7c6a6ecbe89dbcafd1264ff28572/raw/85167ca2e47a05186bd2c05c926734f892918f93/otg-mode.sh --output kek.txt
 
 
@@ -79,7 +79,7 @@ PasswordAuthentication      no
 PermitRootLogin             yes
 EOF
 
-# for raspbian
+ #for raspbian
 ln -sf \
    /mnt/lib/systemd/system/ssh.service \
    /mnt/etc/systemd/system/multi-user.target.wants/ssh.service
@@ -88,13 +88,13 @@ ln -sf \
    /mnt/lib/systemd/system/ssh.service \
    /mnt/etc/systemd/system/sshd.service
 
-## copy my public key to authorized keys in guest device (\mnt)
+ #copy my public key to authorized keys in guest device (\mnt)
 mkdir -p /mnt/root/.ssh
 
 cp $HOME/.ssh/id_rsa.pub /mnt/root/.ssh/authorized_keys
 
-ln -sf \
-   /mnt/etc/systemd/system/otg.service \
-   /mnt/etc/systemd/system/multi-user.target.wants/otg.service
+#ln -sf \
+   #/mnt/etc/systemd/system/otg.service \
+   #/mnt/etc/systemd/system/multi-user.target.wants/otg.service
 
 
