@@ -58,7 +58,7 @@ function install(){
     fi
     
 }
-##dev=$1
+dev=$1
 
 
 
@@ -66,7 +66,7 @@ function install(){
 ## RPi1/Zero (armv6h):
 
 $file=pwd$file
-#install $os
+install $os
 
 
 

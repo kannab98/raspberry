@@ -45,23 +45,23 @@ ln -sf \
 
 
 
-cp ./otg-mode.sh /mnt/root/otg-mode.sh
-chmod +x /mnt/root/otg-mode.sh
+#cp ./otg-mode.sh /mnt/root/otg-mode.sh
+#chmod +x /mnt/root/otg-mode.sh
 #
 #curl https://gist.githubusercontent.com/kannab98/1b0b7c6a6ecbe89dbcafd1264ff28572/raw/85167ca2e47a05186bd2c05c926734f892918f93/otg-mode.sh --output kek.txt
 
 
-touch /mnt/etc/systemd/system/otg.service
-cat << EOF > /mnt/etc/systemd/system/otg.service
-[Unit]
-Description=Pi Zero USB Gadget
+#touch /mnt/etc/systemd/system/otg.service
+#cat << EOF > /mnt/etc/systemd/system/otg.service
+#[Unit]
+#Description=Pi Zero USB Gadget
 
-[Service]
-ExecStart=/root/otg-mode.sh
+#[Service]
+#ExecStart=/root/otg-mode.sh
 
-[Install]
-WantedBy=multi-user.target
-EOF
+#[Install]
+#WantedBy=multi-user.target
+#EOF
 
 touch /mnt/etc/sysctl.d/10-sysctl.conf
 cat << EOF > /mnt/etc/sysctl.d/10-sysctl.conf
